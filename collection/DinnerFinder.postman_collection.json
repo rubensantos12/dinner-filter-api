@@ -1,0 +1,268 @@
+{
+	"info": {
+		"_postman_id": "046346ed-7dd5-4ba2-9835-58c66134e3fc",
+		"name": "DinnerFinder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32142300"
+	},
+	"item": [
+		{
+			"name": "Get All Restaurants",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URI}}/getAllRestaurants",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"getAllRestaurants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Restaurant by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URI}}/getRestaurantById/1",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"getRestaurantById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Restaurant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"New Restaurant\",\n    \"address\": \"Random address\",\n    \"country\": \"PT\",\n    \"rating\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URI}}/addRestaurant",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"addRestaurant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Meal to Restaurant By ID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"mealName\": \"Meatballs\",\n        \"description\": \"Meatballs with spaghetti\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URI}}/restaurant/meals/addMeal/2",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"restaurant",
+						"meals",
+						"addMeal",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Meals By Restaurant ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URI}}/restaurant/meals/1",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"restaurant",
+						"meals",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Restaurant by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URI}}/removeRestaurantById/3",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"removeRestaurantById",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Restaurant Food Type By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URI}}/restaurant/getFoodTypeByRestaurantId/1",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"restaurant",
+						"getFoodTypeByRestaurantId",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Restaurant Food Type",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"typeName\": \"Vegetarian\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URI}}/restaurant/addFoodTypeToRestaurantById/2",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"restaurant",
+						"addFoodTypeToRestaurantById",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new Food Type",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"typeName\": \"Keto\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URI}}/foodTypes/add",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"foodTypes",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Food Types",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URI}}/foodTypes/getAll",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"foodTypes",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Meals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URI}}/meals/getAll",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"meals",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Restaurant By Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URI}}/getRestaurantByName/123123123123",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"getRestaurantByName",
+						"123123123123"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
