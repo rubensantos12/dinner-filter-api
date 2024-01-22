@@ -5,7 +5,7 @@ Simple Spring Boot API for a dinner filter application
 
 This API was created for a full application project where the user will have a user interface with the list of available restaurants, where they will have the option to filter the restaurants by their type of diet (Vegetarian, Keto, Paleo, etc...).
 
-This is not inteded to be or used in any professional way.
+This is not inteded to be used in any professional way.
 ## API Reference
 
 #### Get all restaurants
